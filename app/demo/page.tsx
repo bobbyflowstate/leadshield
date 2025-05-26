@@ -110,10 +110,10 @@ export default function Demo() {
                 No setup required. Just enter your number and she'll call you like she would any other lead.
               </p>
               <Link
-                href="/talk-to-joy"
+                href="/book-demo"
                 className="inline-flex items-center bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg"
               >
-                📞 Talk to Joy Now
+                📞 Get Started with Joy Now
               </Link>
             </div>
           </div>

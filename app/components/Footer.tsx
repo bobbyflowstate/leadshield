@@ -30,14 +30,14 @@ export default function Footer() {
           </div>
 
           {/* Support & Contact */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold mb-4">Support & Contact</h3>
             <ul className="space-y-2">
               <li><Link href="/support" className="hover:text-white transition-colors">Email Support</Link></li>
               <li><Link href="/phone-support" className="hover:text-white transition-colors">Phone Support</Link></li>
-              {/* <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li> */}
+              <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Stay Connect */}
           <div>

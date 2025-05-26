@@ -45,10 +45,10 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
             </div>
             <div>
               <Link 
-                href="/download"
+                href="/demo"
                 className="bg-white text-gray-900 px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
               >
-                Book a Demo
+                Listen to Demo
               </Link>
             </div>
           </>

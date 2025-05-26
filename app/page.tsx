@@ -97,7 +97,7 @@ export default function Home() {
                   href="/book-demo"
                   className="bg-white text-gray-900 px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg flex items-center"
                 >
-                  Book a Demo
+                  Get Started
                 </Link>
               </div>
               <div className="mt-12 space-y-4">
