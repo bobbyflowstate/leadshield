@@ -45,7 +45,7 @@ export default function Demo() {
             <div className="bg-emerald-50 rounded-3xl p-8 mb-12">
               <audio 
                 ref={audioRef} 
-                src="/audio/joy-demo.m4a"
+                src="/audio/joy-demo.wav"
                 onEnded={() => setIsPlaying(false)}
               />
               <div className="flex flex-col items-center">
@@ -63,7 +63,7 @@ export default function Demo() {
                     </svg>
                   )}
                 </button>
-                <p className="text-sm text-gray-600">Playtime: 1–2 minutes | Real call with consent</p>
+                <p className="text-sm text-gray-600">Playtime: 3 minutes | Real call with consent</p>
               </div>
             </div>
 
