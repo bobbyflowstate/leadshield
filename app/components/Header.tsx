@@ -40,7 +40,7 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
                 onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
                 className="text-gray-700 hover:text-gray-900"
               >
-                Contact Us
+                FAQ
               </button>
             </div>
             <div>

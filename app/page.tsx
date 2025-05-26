@@ -141,21 +141,14 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
-              <div className="bg-white rounded-2xl p-8 shadow-2xl">
-                <div className="aspect-video relative bg-emerald-900 rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
+              <div className="rounded-2xl shadow-2xl">
+                <div className="relative bg-emerald-900 rounded-lg overflow-hidden" style={{ aspectRatio: '4/3' }}>
                   <Image
-                    src="/joy-preview.svg"
-                    alt="Joy AI Assistant Preview"
-                    width={640}
-                    height={360}
+                    src="/images/leadshield-joy1.png"
+                    alt="Joy AI Assistant"
+                    fill
                     className="object-cover"
+                    objectPosition="top"
                   />
                 </div>
               </div>
