@@ -237,7 +237,7 @@ export default function Home() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-emerald-700">
                       <Image
-                        src="/images/leadshield-client.png"
+                        src="/images/leadshield-client2.png"
                         alt="LeadShield Dashboard Preview"
                         width={540}
                         height={540}
