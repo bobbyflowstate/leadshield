@@ -370,7 +370,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Section Header */}
-            <div className="flex justify-center mb-16">
+            <div className="flex justify-center mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
                 <div className="w-5 h-5 bg-[#E8FAE5] rounded-md flex items-center justify-center">
                   <span className="text-emerald-700 text-sm">🤔</span>
@@ -378,6 +378,10 @@ export default function Home() {
                 <span className="text-sm font-medium text-gray-900">FAQ</span>
               </div>
             </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-gray-900 text-center">
+              Frequently Asked Questions
+            </h2>
 
             {/* FAQ Grid */}
             <div className="grid md:grid-cols-2 gap-8">
