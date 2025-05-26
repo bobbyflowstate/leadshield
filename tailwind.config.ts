@@ -76,7 +76,11 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+      container: {
+        center: true,
+        padding: '1rem',
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],
