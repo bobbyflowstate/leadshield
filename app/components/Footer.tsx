@@ -11,10 +11,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/features" className="hover:text-white transition-colors">Features</Link></li>
-              <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/demo" className="hover:text-white transition-colors">Listen to Demo</Link></li>
+              <li><Link href="/book-demo" className="hover:text-white transition-colors">Book a Demo</Link></li>
+              {/* <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li> */}
             </ul>
           </div>
 
@@ -24,8 +24,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link></li>
-              <li><Link href="/gdpr" className="hover:text-white transition-colors">GDPR Compliance</Link></li>
+              {/* <li><Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link></li> */}
+              {/* <li><Link href="/gdpr" className="hover:text-white transition-colors">GDPR Compliance</Link></li> */}
             </ul>
           </div>
 
@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/support" className="hover:text-white transition-colors">Email Support</Link></li>
               <li><Link href="/phone-support" className="hover:text-white transition-colors">Phone Support</Link></li>
-              <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
+              {/* <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li> */}
             </ul>
           </div>
 
@@ -43,9 +43,9 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Stay Connect</h3>
             <ul className="space-y-2">
-              <li><Link href="https://twitter.com/leadshield" className="hover:text-white transition-colors">Twitter</Link></li>
-              <li><Link href="https://instagram.com/leadshield" className="hover:text-white transition-colors">Instagram</Link></li>
-              <li><Link href="https://linkedin.com/company/leadshield" className="hover:text-white transition-colors">LinkedIn</Link></li>
+              <li><Link href="" className="hover:text-white transition-colors">Twitter (Coming Soon)</Link></li>
+              {/* <li><Link href="https://instagram.com/leadshield" className="hover:text-white transition-colors">Instagram</Link></li> */}
+              <li><Link href="" className="hover:text-white transition-colors">LinkedIn (Coming Soon)</Link></li>
             </ul>
           </div>
         </div>
