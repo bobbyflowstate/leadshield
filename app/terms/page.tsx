@@ -2,34 +2,12 @@
 
 import Link from "next/link"
 import Image from 'next/image'
+import Header from "@/app/components/Header"
 
 export default function Terms() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <Link href="/">
-              <Image
-                src="/logo.svg"
-                alt="LeadShield Logo"
-                width={120}
-                height={40}
-                className="h-8 w-auto"
-              />
-            </Link>
-          </div>
-          <div>
-            <Link 
-              href="/"
-              className="bg-white text-gray-900 px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-            >
-              Back to Home
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Header showBackToHome={true} />
 
       {/* Header Section */}
       <section className="pt-32 pb-12">

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useEffect, useRef } from "react"
 import { Playfair_Display, Inter } from 'next/font/google'
 import Image from 'next/image'
+import Header from "@/app/components/Header"
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -63,49 +64,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <Image
-              src="/logo.svg"
-              alt="LeadShield Logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
-            />
-          </div>
-          <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-gray-700 hover:text-gray-900"
-            >
-              Home
-            </button>
-            {/* <Link href="/about" className="text-gray-700 hover:text-gray-900">About</Link> */}
-            <button 
-              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-gray-700 hover:text-gray-900"
-            >
-              Pricing
-            </button>
-            <button 
-              onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-gray-700 hover:text-gray-900"
-            >
-              Contact Us
-            </button>
-          </div>
-          <div>
-            <Link 
-              href="/download"
-              className="bg-white text-gray-900 px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-            >
-              Book a Demo
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Header showBackToHome={false} />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20">
