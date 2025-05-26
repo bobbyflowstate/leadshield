@@ -76,10 +76,25 @@ export default function Home() {
             />
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-gray-900">Home</Link>
-            <Link href="/about" className="text-gray-700 hover:text-gray-900">About</Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-gray-900">Pricing</Link>
-            <Link href="/contact" className="text-gray-700 hover:text-gray-900">Contact Us</Link>
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-gray-700 hover:text-gray-900"
+            >
+              Home
+            </button>
+            {/* <Link href="/about" className="text-gray-700 hover:text-gray-900">About</Link> */}
+            <button 
+              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-gray-700 hover:text-gray-900"
+            >
+              Pricing
+            </button>
+            <button 
+              onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-gray-700 hover:text-gray-900"
+            >
+              Contact Us
+            </button>
           </div>
           <div>
             <Link 
@@ -279,7 +294,7 @@ export default function Home() {
       </section>
 
       {/* Get Started Section */}
-      <section className="py-20">
+      <section id="pricing" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -366,7 +381,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="faq" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Section Header */}
