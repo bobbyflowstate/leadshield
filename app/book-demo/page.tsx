@@ -2,17 +2,84 @@
 
 import { useState } from 'react'
 import Header from "@/app/components/Header"
+import { submitBookingForm } from '@/app/actions/book-demo'
 
 export default function BookDemo() {
   const [formData, setFormData] = useState({
     name: '',
     phone: ''
   })
+  const [phoneError, setPhoneError] = useState('')
+  const [submitStatus, setSubmitStatus] = useState<{
+    loading: boolean;
+    error?: string;
+    success?: boolean;
+  }>({
+    loading: false
+  })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Format phone number as user types
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-numeric characters
+    const numbers = value.replace(/\D/g, '')
+    
+    // Ensure it starts with +1
+    if (!numbers.startsWith('1')) {
+      return '+1' + numbers
+    }
+    return '+' + numbers
+  }
+
+  // Validate phone number
+  const validatePhone = (phone: string) => {
+    // Must be exactly 12 characters (+1 plus 10 digits)
+    if (phone.length !== 12) {
+      return 'Phone number must be 10 digits'
+    }
+    
+    // Must match format +1XXXXXXXXXX where X is a digit
+    const phoneRegex = /^\+1\d{10}$/
+    if (!phoneRegex.test(phone)) {
+      return 'Please enter a valid US phone number'
+    }
+
+    return ''
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formattedNumber = formatPhoneNumber(e.target.value)
+    setFormData({ ...formData, phone: formattedNumber })
+    setPhoneError(validatePhone(formattedNumber))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
+    
+    // Final validation before submit
+    const error = validatePhone(formData.phone)
+    if (error) {
+      setPhoneError(error)
+      return
+    }
+
+    setSubmitStatus({ loading: true })
+
+    try {
+      const result = await submitBookingForm(formData)
+
+      if (result.error) {
+        throw new Error(result.error)
+      }
+
+      setSubmitStatus({ loading: false, success: true })
+      setFormData({ name: '', phone: '' }) // Reset form
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus({
+        loading: false,
+        error: error instanceof Error ? error.message : 'Failed to submit form. Please try again or call us directly.'
+      })
+    }
   }
 
   return (
@@ -76,24 +143,51 @@ export default function BookDemo() {
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        Phone Number
+                        Phone Number (US Only)
                       </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                        required
-                      />
+                      <div className="relative">
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handlePhoneChange}
+                          placeholder="+1"
+                          className={`w-full px-4 py-3 rounded-lg border ${phoneError ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'}`}
+                          required
+                        />
+                        {phoneError && (
+                          <p className="mt-1 text-sm text-red-600">
+                            {phoneError}
+                          </p>
+                        )}
+                      </div>
                     </div>
                     <button
                       type="submit"
-                      className="w-full bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg"
+                      className="w-full bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                      disabled={!!phoneError || !formData.phone || !formData.name || submitStatus.loading}
                     >
-                      Have Joy Call Me
+                      {submitStatus.loading ? (
+                        <>
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Submitting...
+                        </>
+                      ) : 'Have Joy Call Me'}
                     </button>
+                    {submitStatus.error && (
+                      <p className="mt-3 text-sm text-red-600 text-center">
+                        {submitStatus.error}
+                      </p>
+                    )}
+                    {submitStatus.success && (
+                      <div className="mt-3 text-sm text-emerald-600 text-center">
+                        <p>Thanks! Joy will call you shortly.</p>
+                      </div>
+                    )}
                   </div>
                 </form>
               </div>
@@ -138,7 +232,6 @@ export default function BookDemo() {
               <ul className="space-y-4">
                 {[
                   "You meet with us to customize Joy for your business",
-                  "Yes, you can change her name, voice, and more",
                   "We handle calendar, call routing, and setup",
                   "You only pay once Joy is activated and working for you"
                 ].map((item, index) => (
