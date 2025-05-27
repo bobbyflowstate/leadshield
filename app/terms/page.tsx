@@ -60,7 +60,7 @@ export default function Terms() {
                   </li>
                 </ul>
                 <p className="text-gray-600 mb-4">
-                  We do not currently offer SMS or text-based AI messaging services. We reserve the right to modify, suspend, or discontinue any aspect of the Services at any time.
+                  Additional services such as SMS/text messaging, chat widgets, CRM management, automations, and database reactivations are available as upgrades. We reserve the right to modify, suspend, or discontinue any aspect of the Services at any time.
                 </p>
               </div>
 
