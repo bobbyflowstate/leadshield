@@ -10,6 +10,7 @@ export default function BookDemo() {
     phone: ''
   })
   const [phoneError, setPhoneError] = useState('')
+  const [nameError, setNameError] = useState('')
   const [submitStatus, setSubmitStatus] = useState<{
     loading: boolean;
     error?: string;
@@ -46,6 +47,22 @@ export default function BookDemo() {
     return ''
   }
 
+  const validateName = (name: string) => {
+    if (name.length < 2) {
+      return 'Name must be at least 2 characters long'
+    }
+    if (name.length > 100) {
+      return 'Name must be less than 100 characters'
+    }
+    return ''
+  }
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newName = e.target.value
+    setFormData({ ...formData, name: newName })
+    setNameError(validateName(newName))
+  }
+
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formattedNumber = formatPhoneNumber(e.target.value)
     setFormData({ ...formData, phone: formattedNumber })
@@ -56,9 +73,16 @@ export default function BookDemo() {
     e.preventDefault()
     
     // Final validation before submit
-    const error = validatePhone(formData.phone)
-    if (error) {
-      setPhoneError(error)
+    const phoneValidationError = validatePhone(formData.phone)
+    const nameValidationError = validateName(formData.name)
+
+    if (phoneValidationError) {
+      setPhoneError(phoneValidationError)
+      return
+    }
+
+    if (nameValidationError) {
+      setNameError(nameValidationError)
       return
     }
 
@@ -136,10 +160,15 @@ export default function BookDemo() {
                         id="name"
                         name="name"
                         value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        onChange={handleNameChange}
+                        className={`w-full px-4 py-3 rounded-lg border ${nameError ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'}`}
                         required
                       />
+                      {nameError && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {nameError}
+                        </p>
+                      )}
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
