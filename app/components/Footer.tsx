@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col space-y-2 text-sm">
             <p>LeadShield.xyz is a service operated by SMOVER LLC.</p>
-            <p>Business Address: 1234 Market Street, Suite 500, San Francisco, CA 94103</p>
+            <p>Business Address: 253 Garth Road unit 5G Scarsdale NY 10583</p>
             <p>© 2025 SMOVER LLC. All rights reserved.</p>
           </div>
         </div>
