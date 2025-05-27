@@ -202,7 +202,7 @@ export default function Home() {
                   "Speaks Spanish and English fluently",
                   "Books real appointments into your calendar",
                   "Handles 24/7 follow-up with warmth and clarity",
-                  "No tech headaches. Fully managed setup",
+                  "No tech headaches. Fully managed, quick setup with real human support",
                   "Optional upgrades for automations, texting, and lead management tools"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-6">
