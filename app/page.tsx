@@ -201,6 +201,7 @@ export default function Home() {
                   "Filters cold leads automatically",
                   "Speaks Spanish and English fluently",
                   "Books real appointments into your calendar",
+                  "No CRM required — leads can go straight to your phone, calendar, or inbox.",
                   "Handles 24/7 follow-up with warmth and clarity",
                   "No tech headaches. Fully managed, quick setup with real human support",
                   "Optional upgrades for automations, texting, and lead management tools"
@@ -354,8 +355,8 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  q: "Can I use this with my current CRM?",
-                  a: "Yes. We integrate with most platforms or provide a simple interface."
+                  q: "Where are your reviews?",
+                  a: "We’re a new company, but you won’t need five-star reviews — you’ll see the proof for yourself, right away, with zero risk."
                 },
                 {
                   q: "Do I need special hardware?",
@@ -366,8 +367,8 @@ export default function Home() {
                   a: "Then don't continue. No lock-ins. Pay only if it works."
                 },
                 {
-                  q: "Can Joy respond to texts too?",
-                  a: "Yes! We offer a texting upgrade for qualified users after the demo."
+                  q: "How does pricing work?",
+                  a: "Pricing is flexible and built around the services you choose. We focus on delivering real value — not locking you into one-size-fits-all plans."
                 }
               ].map((faq, index) => (
                 <div 

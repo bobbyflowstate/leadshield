@@ -7,7 +7,9 @@ import { submitBookingForm } from '@/app/actions/book-demo'
 export default function BookDemo() {
   const [formData, setFormData] = useState({
     name: '',
-    phone: ''
+    phone: '',
+    smsConsent: false,
+    marketingConsent: false
   })
   const [phoneError, setPhoneError] = useState('')
   const [nameError, setNameError] = useState('')
@@ -86,6 +88,14 @@ export default function BookDemo() {
       return
     }
 
+    if (!formData.smsConsent) {
+      setSubmitStatus({
+        loading: false,
+        error: 'Please agree to receive important messages about your request.'
+      })
+      return
+    }
+
     setSubmitStatus({ loading: true })
 
     try {
@@ -96,7 +106,7 @@ export default function BookDemo() {
       }
 
       setSubmitStatus({ loading: false, success: true })
-      setFormData({ name: '', phone: '' }) // Reset form
+      setFormData({ name: '', phone: '', smsConsent: false, marketingConsent: false }) // Reset form
     } catch (error) {
       console.error('Error submitting form:', error)
       setSubmitStatus({
@@ -190,6 +200,52 @@ export default function BookDemo() {
                             {phoneError}
                           </p>
                         )}
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      {/* SMS Consent Checkbox */}
+                      <div className="flex items-start">
+                        <div className="flex items-center h-5">
+                          <input
+                            id="smsConsent"
+                            name="smsConsent"
+                            type="checkbox"
+                            checked={formData.smsConsent}
+                            onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
+                            className="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
+                            required
+                          />
+                        </div>
+                        <div className="ml-3">
+                          <label htmlFor="smsConsent" className="text-sm text-gray-700">
+                            I agree to receive important messages about my request.
+                          </label>
+                          <p className="text-xs text-gray-500">
+                            Message and data rates may apply. Reply STOP to unsubscribe.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Marketing Consent Checkbox */}
+                      <div className="flex items-start">
+                        <div className="flex items-center h-5">
+                          <input
+                            id="marketingConsent"
+                            name="marketingConsent"
+                            type="checkbox"
+                            checked={formData.marketingConsent}
+                            onChange={(e) => setFormData({ ...formData, marketingConsent: e.target.checked })}
+                            className="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
+                          />
+                        </div>
+                        <div className="ml-3">
+                          <label htmlFor="marketingConsent" className="text-sm text-gray-700">
+                            I'd like to receive occasional updates, offers, or news.
+                          </label>
+                          <p className="text-xs text-gray-500">
+                            Optional. You can unsubscribe anytime.
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <button
