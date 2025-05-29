@@ -264,7 +264,7 @@ export default function Home() {
               <div className="bg-white rounded-3xl p-10 shadow-sm">
                 <div className="space-y-6">
                   {[
-                    "Zero setup cost to get started",
+                    "No upfront payment - set up cost is billed later if you continue.",
                     "Risk-free trial — pay only when Joy begins delivering results",
                     "No contracts or lock-ins",
                     "Your assistant is customized and integrated for you",
