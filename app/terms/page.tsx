@@ -119,7 +119,13 @@ export default function Terms() {
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Payments and Subscription</h2>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">5.1 Pricing</h3>
                 <p className="text-gray-600 mb-4">
-                  LeadShield charges a recurring subscription fee for use of the Services. A one-time setup fee is required to activate your account. Details of all fees will be clearly disclosed during onboarding or through written communication before service activation.
+                  LeadShield provides a fixed monthly subscription tailored to your selected services. A one-time setup fee is included in your first billing cycle and may be spread over three months.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Service activation marks the start of your billing period. Invoices are typically issued within 7 days of activation.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  A secure payment method for usage minutes will be collected via Stripe, our third-party payment processor, prior to activation. LeadShield does not store or process your payment information directly.
                 </p>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">5.2 Billing & Renewals</h3>
                 <p className="text-gray-600 mb-4">
