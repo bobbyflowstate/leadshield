@@ -270,7 +270,7 @@ export default function BookDemo() {
                     )}
                     {submitStatus.success && (
                       <div className="mt-3 text-sm text-emerald-600 text-center">
-                        <p>Thanks! Joy will call you shortly.</p>
+                        <p>Thanks! Joy will call you shortly if it's between 8 am and 6 pm EST.</p>
                       </div>
                     )}
                   </div>
