@@ -59,9 +59,9 @@ export default function Footer() {
         {/* Company Info */}
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col space-y-2 text-sm">
-            <p>LeadShield.xyz is a service operated by SMOVER LLC.</p>
+            <p>LeadShield.xyz is a service operated by Kevin P. Stratmann, DBA SMOVR.</p>
             <p>Business Address: 253 Garth Road unit 5G Scarsdale NY 10583</p>
-            <p>© 2025 SMOVER LLC. All rights reserved.</p>
+            <p>© 2025 Kevin P. Stratmann, DBA SMOVR. All rights reserved.</p>
           </div>
         </div>
       </div>

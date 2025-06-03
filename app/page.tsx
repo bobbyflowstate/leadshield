@@ -84,7 +84,7 @@ export default function Home() {
                 Enjoy Your Time. Qualify Leads. Book More Appointments.
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                LeadShield.xyz is your 24/7 AI assistant for real estate agents. It filters out cold leads, captures the real ones, and fills your calendar — so you can focus on what you enjoy most.
+                LeadShield.xyz is your 24/7 voice & text assistant for real estate agents. It filters out cold leads, captures the serious ones, and books appointments — so you spend less time chasing and more time closing.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
