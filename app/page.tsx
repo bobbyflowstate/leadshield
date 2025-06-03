@@ -174,6 +174,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Backstory Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Section Label */}
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full shadow-sm">
+                <div className="w-5 h-5 bg-[#E8FAE5] rounded-md flex items-center justify-center">
+                  <span className="text-emerald-700">✨</span>
+                </div>
+                <span className="text-sm font-medium text-gray-900">Our Story</span>
+              </div>
+            </div>
+
+            <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+              Your Partner in Navigating Technological Change
+            </h2>
+
+            <div className="bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-12 shadow-sm relative overflow-hidden">
+              {/* Decorative Elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100 rounded-full opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-200 rounded-full opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
+
+              <div className="relative z-10">
+                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                  LeadShield started with a simple idea: help small businesses adapt to change without losing their time, their leads, or their voice.
+                </p>
+
+                <div className="flex items-start gap-6 mb-8">
+                  <div className="flex-shrink-0">
+                    <Image
+                      src="/images/kevin-profile.jpg"
+                      alt="Kevin - Founder"
+                      width={80}
+                      height={80}
+                      className="rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                      I'm Kevin — author of Shift Success AI. After decades of guiding people and teams through personal transformation, I partnered with a seasoned software engineer to build tools that combine voice AI with emotional intelligence.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                  Together, we created an assistant that:
+                </p>
+
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                  {["Qualifies leads", "Books appointments", "Runs 24/7", "Sounds warm, human, and real"].map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-gray-700">
+                      <span className="text-emerald-700">✔️</span>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-xl text-gray-700 italic">
+                  It's automation designed for people doing meaningful work — who still care how they show up.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -356,7 +423,7 @@ export default function Home() {
               {[
                 {
                   q: "Where are your reviews?",
-                  a: "We’re a new company, but you won’t need five-star reviews — you’ll see the proof for yourself, right away, with zero risk."
+                  a: "We're a new company, but you won't need five-star reviews — you'll see the proof for yourself, right away, with zero risk."
                 },
                 {
                   q: "Do I need special hardware?",
