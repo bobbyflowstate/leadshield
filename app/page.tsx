@@ -222,8 +222,8 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-              Your Partner in Navigating Technological Change
+            <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 text-gray-900">
+              Your Human Partner in Navigating The Future
             </h2>
 
             <div className="bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-12 shadow-sm relative overflow-hidden">
@@ -233,22 +233,22 @@ export default function Home() {
 
               <div className="relative z-10">
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  LeadShield started with a simple idea: help small businesses adapt to change without losing their time, their leads, or their voice.
+                Small businesses are drowning in missed calls, cold leads, and tech they don't have time to learn. We built LeadShield to change that — to give business owners their time back, help them close more deals, and free them to build the life they actually want: more freedom, more joy, more control.
                 </p>
 
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="flex-shrink-0">
+                <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
+                  <div className="flex-shrink-0 mx-auto md:mx-0">
                     <Image
                       src="/images/kevin-profile.jpg"
                       alt="Kevin - Founder"
-                      width={80}
-                      height={80}
+                      width={120}
+                      height={120}
                       className="rounded-full"
                     />
                   </div>
-                  <div>
+                  <div className="text-center md:text-left">
                     <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                      I'm Kevin — author of Shift Success AI. After decades of guiding people and teams through personal transformation, I partnered with a seasoned software engineer to build tools that combine voice AI with emotional intelligence.
+                      I'm Kevin — author of Shift Success AI. After decades of guiding people and teams through personal transformation, I partnered with <a href="https://about.me/ashokraju" target="_blank" rel="noopener noreferrer" className="text-emerald-700 hover:underline">Ashok Kidraj, a seasoned software engineer</a>, to build tools that combine voice AI with emotional intelligence.
                     </p>
                   </div>
                 </div>
