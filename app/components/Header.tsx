@@ -45,10 +45,10 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
             </div>
             <div>
               <Link 
-                href="/demo"
+                href="/loss-calculator"
                 className="bg-white text-gray-900 px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
               >
-                Listen to Demo
+                How Much $ Are You Losing?
               </Link>
             </div>
           </>
