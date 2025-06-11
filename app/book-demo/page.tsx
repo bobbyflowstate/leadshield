@@ -126,10 +126,10 @@ export default function BookDemo() {
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                You're One Step Away from Letting Joy Handle Your Leads
+                You're One Step Away from Recovering Thousands in Lost Revenue
               </h1>
               <p className="text-xl text-gray-600">
-                This isn't a generic demo — it's the start of your setup. Joy will show you how she answers calls and help you book your onboarding with the LeadShield team.
+                This isn't a generic demo — it's the start of your setup. Joy will show you how she answers calls, qualifies leads and books appointments <span className="font-bold">as if she's your assistant</span>. She'll help you book your onboarding with the LeadShield team so you can start recovering lost revenue today.
               </p>
             </div>
 
