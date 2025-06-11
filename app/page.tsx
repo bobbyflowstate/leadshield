@@ -289,21 +289,17 @@ export default function Home() {
             </div>
 
             {/* Image Section */}
-            <div className="relative w-[540px]">
+            <div className="relative w-full">
               <div className="rounded-3xl overflow-hidden border-8 border-[#065f46] bg-[#E8FAE5]">
                 <div className="relative aspect-square">
-
                   {/* Placeholder for actual image */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-emerald-700">
-                      <Image
-                        src="/images/leadshield-client2.png"
-                        alt="LeadShield Dashboard Preview"
-                        width={540}
-                        height={540}
-                        className="rounded-lg"
-                      />
-                    </div>
+                    <Image
+                      src="/images/leadshield-client2.png"
+                      alt="LeadShield Dashboard Preview"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
               </div>
