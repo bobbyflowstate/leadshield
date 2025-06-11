@@ -148,7 +148,7 @@ export default function Home() {
                     alt="Joy AI Assistant"
                     fill
                     className="object-cover"
-                    objectPosition="top"
+                    style={{ objectPosition: 'top' }}
                   />
                 </div>
               </div>
