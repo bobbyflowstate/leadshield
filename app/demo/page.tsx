@@ -113,7 +113,7 @@ export default function Demo() {
                 href="/book-demo"
                 className="inline-flex items-center bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg"
               >
-                📞 Get Started with Joy Now
+                📞 Recover $10K+ in Lost Revenue Now
               </Link>
             </div>
           </div>

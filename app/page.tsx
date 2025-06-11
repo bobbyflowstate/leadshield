@@ -81,23 +81,23 @@ export default function Home() {
                 />
               </div>
               <h1 className="text-5xl font-bold leading-tight mb-6 text-gray-900">
-                Enjoy Your Time. Qualify Leads. Book More Appointments.
+              You're Losing $10K+ a Month in Missed Leads.<span className="text-red-500"> We Stop the Bleeding.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                LeadShield.xyz is your 24/7 voice & text assistant for real estate agents. It filters out cold leads, captures the serious ones, and books appointments — so you spend less time chasing and more time closing.
+              Real estate agents miss deals when they can't follow up fast enough — especially nights and weekends. LeadShield answers every call, qualifies every lead, and books appointments while you sleep. Pay a fraction, recover 10x.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/demo"
+                  href="/loss-calculator"
                   className="bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg flex items-center"
                 >
-                  👉 Listen to a Demo Now
+                  See How Much You're Losing 💰
                 </Link>
                 <Link
                   href="/book-demo"
                   className="bg-white text-gray-900 px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg flex items-center"
                 >
-                  Get Started
+                  Stop the Bleeding
                 </Link>
               </div>
               <div className="mt-12 space-y-4">
@@ -105,26 +105,26 @@ export default function Home() {
                   <svg className="w-6 h-6 mr-3 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>AI-Powered Lead Qualification</span>
+                  <span>Recover 5–6 Figures in Lost Revenue</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <svg className="w-6 h-6 mr-3 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Automated Follow-ups</span>
+                  <span>24/7 Lead Qualification & Booking</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <svg className="w-6 h-6 mr-3 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Smart Calendar Integration</span>
+                  <span>Full service. We set you up in minutes.</span>
                 </div>
               </div>
             </div>
             <div className="relative">
               <div className="p-8">
                 <Image
-                  src="/images/leadshield-hero2.png"
+                  src="/images/leadshield-heropain2.png"
                   alt="LeadShield Dashboard Preview"
                   width={800}
                   height={600}
