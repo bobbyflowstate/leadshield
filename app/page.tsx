@@ -136,6 +136,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Leadflow Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+                You're Not Slow. You're Just Swamped
+              </h2>
+              <p className="text-xl text-gray-600">
+                We fix that with 24/7 lead qualification + booking. <span className="font-bold">Set up for you in minutes.</span>
+              </p>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/leadflow3.png"
+                alt="LeadShield Lead Flow Process"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+            <div className="mt-12 text-center">
+              <Link
+                href="/book-demo"
+                className="inline-flex items-center bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition-colors duration-200 text-lg md:text-2xl shadow-lg"
+              >
+                Recover $10K+ in Revenue Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Demo Preview Section */}
       <section className="py-20 bg-emerald-50">
         <div className="container mx-auto px-4">
