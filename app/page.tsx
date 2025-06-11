@@ -95,9 +95,9 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/book-demo"
-                  className="bg-white text-gray-900 px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg flex items-center"
+                  className="bg-red-500 text-white px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg flex items-center"
                 >
-                  Stop the Bleeding
+                Stop the Bleeding
                 </Link>
               </div>
               <div className="mt-12 space-y-4">
@@ -265,13 +265,12 @@ export default function Home() {
             <div className="bg-white rounded-3xl p-10 shadow-sm">
               <div className="space-y-12">
                 {[
-                  "Filters cold leads automatically",
+                  "Recovers 5 – 6 figures in lost revenue",
+                  "24/7 lead qualification & booking",
+                  "Costs a fraction of what you're losing",
+                  "No tech headaches. Fully managed setup in minutes with real human support",
                   "Speaks Spanish and English fluently",
-                  "Books real appointments into your calendar",
-                  "No CRM required — leads can go straight to your phone, calendar, or inbox.",
-                  "Handles 24/7 follow-up with warmth and clarity",
-                  "No tech headaches. Fully managed, quick setup with real human support",
-                  "Optional upgrades for automations, texting, and lead management tools"
+                  "Leads can go straight to your phone, calendar, or inbox.",
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-6">
                     <div className="flex-shrink-0">
